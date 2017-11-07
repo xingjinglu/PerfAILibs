@@ -104,14 +104,14 @@ make
 Tips: when install python with anaconda2, install python virtualenv with below comman
 $conda install virtualenv
 
-e) Download the openai-gemm
-git clone https://github.com/openai/openai-gemm.git
-
-Tips: The ptxas of cuda9.0 will introduce bugs when compile  "sgemm_128x128x8_NN.ptx"
-Hacks: 
- replace ptxas with ptaas of cuda-8.0, such as below:
+e) Download the openai-gemm  
+ git clone https://github.com/openai/openai-gemm.git  
  
- run_command([ "/usr/local/cuda-8.0/bin/ptxas -v -arch", arch, "-o", cubin_file, ptx_file, ";" ] + maxas_i + [sass_file, cubin_file])
+ Tips: The ptxas of cuda9.0 will introduce bugs when compile  "sgemm_128x128x8_NN.ptx"  
+ Hacks: 
+  replace ptxas with ptaas of cuda-8.0, such as below:
+ 
+  run_command([ "/usr/local/cuda-8.0/bin/ptxas -v -arch", arch, "-o", cubin_file, ptx_file, ";" ] + maxas_i + [sass_file, cubin_file])
 
  
  
