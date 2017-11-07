@@ -1,4 +1,4 @@
-
+  
 # PerfAILibs
 
 ## Performance Analysis OpenAI-gemm vs cuBLAS on GEMM
@@ -7,18 +7,18 @@
 
  python2.7.5 
  1) install pip
- wget https://bootstrap.pypa.io/get-pip.py
- python get-pip.py
+    wget https://bootstrap.pypa.io/get-pip.py
+    python get-pip.py
 4) install pycuda (three method)
  a) pip install pycuda (work)
  b) apt-get install python-cuda( not good)
  c) dowload pycuda source code // pycuda-2017.1.1.tar.gz
-   configure: python configure.py --cuda-root=/usr/local/cuda/
-   make
-   make install
+    configure: python configure.py --cuda-root=/usr/local/cuda/
+    make
+    make install
    
-   Test the install of pycuda:
-   $python test/test_driver.py
+    Test the install of pycuda:
+    $python test/test_driver.py
  
 3）Nervana NEON
    https://github.com/NervanaSystems/neon.git 
