@@ -5,30 +5,30 @@
 
 ### OpenAI-gemm vs CUDA8.0.61 on TitanXp
 
-``` python2.7.5 
- ```1) install pip
- ```   wget https://bootstrap.pypa.io/get-pip.py 
- ```   python get-pip.py 
-```4) install pycuda (three method) 
-``` a) pip install pycuda (work)  
-``` b) apt-get install python-cuda( not good)  
-``` c) dowload pycuda source code // pycuda-2017.1.1.tar.gz  
-```    configure: python configure.py --cuda-root=/usr/local/cuda/  
-```    make 
-```    make install 
+  python2.7.5 <br>
+ 1) install pip<br>
+    wget https://bootstrap.pypa.io/get-pip.py <br>
+    python get-pip.py <br>
+ 4) install pycuda (three method) <br>
+  a) pip install pycuda (work)  <br>
+  b) apt-get install python-cuda( not good)  <br><
+  c) dowload pycuda source code // pycuda-2017.1.1.tar.gz  <br>
+     configure: python configure.py --cuda-root=/usr/local/cuda/  <br>
+    make <br>
+    make install <br>
    
-```    Test the install of pycuda: 
- ```   $python test/test_driver.py 
+    Test the install of pycuda: <br>
+   $python test/test_driver.py <br>
  
-```3）Nervana NEON 
-```   https://github.com/NervanaSystems/neon.git  
-```  cd neon 
-```  make 
- ``` . .venv/bin/activate 
+ 3）Nervana NEON <br>
+   https://github.com/NervanaSystems/neon.git  <br>
+   cd neon <br>
+   make <br>
+  . .venv/bin/activate <br>
+ 
+ Test: python examples/mnist_mlp.py <br>
   
-```  Test: python examples/mnist_mlp.py 
-  
-```4） git clone https://github.com/openai/openai-gemm.git 
+ 4） git clone https://github.com/openai/openai-gemm.git <br>
 
   
   
