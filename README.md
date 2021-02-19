@@ -13,12 +13,13 @@
   a) pip install pycuda (work)  
   b) apt-get install python-cuda( not work)  
   c) dowload pycuda source code // pycuda-2017.1.1.tar.gz  
+  
+  ```bash   
      configure: python configure.py --cuda-root=/usr/local/cuda/  
     make 
     make install 
     
-   ```bash  
-    Test the install of pycuda: 
+   # Test the install of pycuda: 
    $python test/test_driver.py 
    ```
  
@@ -122,24 +123,24 @@ TITAN Xp
 
 
 ### OpenAI-gemm vs CUDAV9.0.176 on TitanXp
- a）Install NVIDIA GPU Driver<br>
- b）Install cuda9.0<br>
- c）install pycuda with command<br>
-    pip install pycuda // the version of pycuda is 2017.1.1<br>
- d) Install neon<br>
-    https://github.com/NervanaSystems/neon.git<br>
-    make<br>
-    . .venv/bin/activate<br>
+ a）Install NVIDIA GPU Driver<br>  
+ b）Install cuda9.0<br>  
+ c）install pycuda with command<br>  
+    pip install pycuda // the version of pycuda is 2017.1.1<br>  
+ d) Install neon<br>  
+    https://github.com/NervanaSystems/neon.git<br>  
+    make<br>  
+    . .venv/bin/activate<br>  
 
 Tips: when install python with anaconda2, install python virtualenv with below comman<br>
-$conda install virtualenv<br>
+$conda install virtualenv<br>  
 
 e) Download the openai-gemm  <br>
    git clone https://github.com/openai/openai-gemm.git  <br>
  
    Tips: The ptxas of cuda9.0 will introduce bugs when compile  "sgemm_128x128x8_NN.ptx" <br> 
    Hacks: <br>
-   replace ptxas with ptaas of cuda-8.0, such as below:<br>
+   replace ptxas with ptaas of cuda-8.0, such as below:<br>  
  
     run_command([ "/usr/local/cuda-8.0/bin/ptxas -v -arch", arch, "-o", cubin_file, ptx_file, ";" ] + maxas_i + [sass_file, cubin_file])
 
